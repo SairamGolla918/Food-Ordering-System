@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+
+        /* General styling */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Noto Serif', serif;
+            font-weight: 400;
+            background-color: #F5ECE9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            /* background-image: url('path-to-your-background-image.jpg');  */
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        /* Container for form */
+        .container {
+            background-color: #62B272;
+            padding: 50px;
+            border: 2px solid;
+            /* border-radius: 15px; */
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
+            max-width: 700px;
+            width: 100%;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #000;
+            font-weight: 700;
+        }
+
+        /* Input fields */
+        .form-group {
+            margin-bottom: 20px;
+        }
+        ::placeholder{
+         color: black;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 2px solid;
+            font-size: 16px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, .8);
+        }
+
+        .form-group input:focus {
+            border-color: #333;
+            outline: none;
+        }
+
+        /* Register button */
+        .register-btn {
+            display:flex;
+            font-family: 'Noto Serif', serif;
+            font-weight: 700;
+            width: 50%;
+            padding: 7px;
+            margin-left: 150px;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid;
+            background-color: #FF7A00; /* Orange color */
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, .8);
+            transition: background-color 0.3s ease;
+        }
+
+        .register-btn:hover {
+            background-color: #E56A00;
+        }
+
+        /* Adjusting input field width */
+        input {
+            background-color: #F5ECE9;
+        }
+
+        /* Background styling */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.2);
+            z-index: -1;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Register</h2>
+        <form action="/submit_registration" method="POST">
+            <div class="form-group">
+                <input type="email" name="email" placeholder="e-mail address" required>
+            </div>
+            <div class="form-group">
+                <input type="text" name="firstname" placeholder="firstname" required>
+            </div>
+            <div class="form-group">
+                <input type="text" name="lastname" placeholder="lastname" required>
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" placeholder="password" required>
+            </div>
+            <div class="form-group">
+                <input type="password" name="confirm_password" placeholder="confirm password" required>
+            </div>
+            <button type="submit" class="register-btn">Register</button>
+        </form>
+    </div>
+</body>
+</html>
