@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+/* Background */
+body {
+   
+    background-color: #F3E8FF;
+    background: linear-gradient(rgba(194, 142, 209, 0.6), rgba(194, 142, 209, .6), rgba(194, 142, 209, .6)); 
+    background-repeat: repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+.noto {
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+/* Container */
+.container {
+    background-color: #C28ED1;
+    padding: 100px;
+    border-radius: 15px;
+    border: 2px solid;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Heading */
+h2 {
+    color: #5C007A;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Buttons */
+button {
+    font-family: "Noto Serif", serif;
+    font-weight: 400;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.7);
+
+    width: 150px;
+    padding: 10px 20px;
+    margin: 10px;
+    border: 2px solid;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    background-color: orangered;
+    width: 0px;
+    height: 0px;
+    left: var(--xPos);
+    top: var(--yPos);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: width 0.5s, height 0.5s;
+    z-index: 0;
+}
+
+button:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+button span {
+    position: relative;
+    z-index: 1;
+}
+
+.login-btn {
+    background-color: #FF7A00;
+    color: black;
+}
+
+.register-btn {
+    background-color: #BCCBEA;
+    color: black;
+}
+
+/* Image */
+.image img {
+    width: 200px;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+</style>
+<body class="noto">
+    <div class="container">
+        <div class="login-box">
+            <h2>Welcome foodie..!</h2>
+            <div class="image">
+                <img src="images/img2.svg" alt="People Dining" />
+            </div>
+            <div>
+                <button class="login-btn"><span>Login</span></button>
+                <button class="register-btn"><span>Register</span></button>
+            </div>    
+        </div>
+    </div>
+</body>
+
+<script>
+
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach(button => {
+    button.addEventListener("mouseover", (event) => {
+        const x = event.pageX - button.offsetLeft;
+        const y = event.pageY - button.offsetTop;
+
+        button.style.setProperty("--xPos", x + "px");
+        button.style.setProperty("--yPos", y + "px");
+    });
+});
+
+
+const loginBtn = document.querySelector(".login-btn");
+const registerBtn = document.querySelector(".register-btn");
+
+loginBtn.addEventListener("click", () => {
+    window.location.href = "login.html"; // Navigate to login page
+});
+
+registerBtn.addEventListener("click", () => {
+    window.location.href = "register.html"; // Navigate to register page
+});
+</script>
+</html>
