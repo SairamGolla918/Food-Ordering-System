@@ -1,0 +1,147 @@
+<!-- Item Card 2 -->
+        <div class="item-card">
+            <div class="itemcard-img">
+                <img src="https://via.placeholder.com/100x100" alt="Fries">
+            </div> 
+            <h3>Cola</h3>
+            <p>20rs</p>
+            <div class="quantity-control">
+                <button>↑</button>
+                <div class="quantity">1</div>
+                <button>↓</button>
+            </div>
+        </div>
+
+        <!-- Item Card 3 -->
+        <div class="item-card">
+            <div class="itemcard-img">
+                <img src="https://via.placeholder.com/100x100" alt="Fries">
+            </div> 
+            <h3>Pizza</h3>
+            <p>150rs</p>
+            <div class="quantity-control">
+                <button>↑</button>
+                <div class="quantity">1</div>
+                <button>↓</button>
+            </div>
+        </div>
+
+        <!-- Item Card 4 -->
+        <div class="item-card">
+            <div class="itemcard-img">
+                <img src="https://via.placeholder.com/100x100" alt="Fries">
+            </div> 
+            <h3>Biryani</h3>
+            <p>150rs</p>
+            <div class="quantity-control">
+                <button>↑</button>
+                <div class="quantity">1</div>
+                <button>↓</button>
+            </div>
+        </div>
+
+        
+        <div class="item-card">
+            <div class="itemcard-img">
+                <img src="https://via.placeholder.com/100x100" alt="Fries">
+            </div> 
+            <h3>Fries</h3>
+            <p>50rs</p>
+            <div class="quantity-control">
+                <button>↑</button>
+                <div class="quantity">1</div>
+                <button>↓</button>
+            </div>
+        </div>
+
+        
+        <div class="item-card">
+            <div class="itemcard-img">
+                <img src="https://via.placeholder.com/100x100" alt="Fries">
+            </div> 
+            <h3>Pizza</h3>
+            <p>150rs</p>
+            <div class="quantity-control">
+                <button>↑</button>
+                <div class="quantity">1</div>
+                <button>↓</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    ===============================================================================
+
+
+
+    .item-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.6);
+            padding: 15px;
+            text-align: center;
+            border: 2px solid ;
+            height: 250px;
+            position: relative;
+        }
+        .itemcard-img{
+            position: absolute;
+            background-color: #C28ED1;
+            width: 280px;
+            border-radius: 10px;
+            border: 2px solid;
+            
+        }
+
+        .item-card img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+
+        .item-card h3 {
+            position: absolute;
+            margin: 10px 0;
+            font-size: 18px;
+            color: #333;
+            bottom: 75px;
+        }
+
+        .item-card p {
+            margin: 0;
+            font-size: 16px;
+            color: #777;
+        }
+
+        .quantity-control {
+            position: absolute;
+            top: 25px;
+            right: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .quantity-control button {
+            background-color: #FF7A00;
+            color: black;
+            border: 2px solid;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+            font-size: 18px;
+        }
+
+        .quantity {
+            width: 30px;
+            height: 30px;
+            background-color: #d1d45c;
+            border: 2px solid;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+            font-size: 16px;
+            color: #333;
+            margin: 5px 0;
+        }
