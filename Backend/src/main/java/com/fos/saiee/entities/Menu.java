@@ -2,6 +2,7 @@ package com.fos.saiee.entities;
 
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
 
@@ -10,6 +11,7 @@ import jakarta.persistence.Id;
 public class Menu {
 
 	@Id
+	@GeneratedValue
 	int item_id;
 	String item_name;
 	Double price;
