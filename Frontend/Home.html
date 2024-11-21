@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant Menu</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=shopping_cart" />
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
 
@@ -18,6 +19,9 @@
             font-family: 'Noto Serif', serif;
             background-color: #F5ECE9;
             /* padding: 20px; */
+            height: 100%;
+            width: 100%;
+            
         }
 
         
@@ -27,8 +31,9 @@
             display: flex;
             /* justify-content: space-between; */
             align-items: center;
-            margin-bottom: 20px;
-            position: relative;
+            /* margin-bottom: 20px; */
+            position: sticky;
+
         }
 
         .header h1 {
@@ -89,76 +94,7 @@
             padding: 15px;
         }
 
-        .item-card {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.6);
-            padding: 15px;
-            text-align: center;
-            border: 2px solid ;
-            height: 250px;
-            position: relative;
-        }
-        .itemcard-img{
-            position: absolute;
-            background-color: #C28ED1;
-            width: 280px;
-            border-radius: 10px;
-            border: 2px solid;
-            
-        }
-
-        .item-card img {
-            width: 100px;
-            height: 100px;
-            margin-bottom: 10px;
-        }
-
-        .item-card h3 {
-            position: absolute;
-            margin: 10px 0;
-            font-size: 18px;
-            color: #333;
-            bottom: 75px;
-        }
-
-        .item-card p {
-            margin: 0;
-            font-size: 16px;
-            color: #777;
-        }
-
-        .quantity-control {
-            position: absolute;
-            top: 25px;
-            right: 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .quantity-control button {
-            background-color: #FF7A00;
-            color: black;
-            border: 2px solid;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            cursor: pointer;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
-            font-size: 18px;
-        }
-
-        .quantity {
-            width: 30px;
-            height: 30px;
-            background-color: #d1d45c;
-            border: 2px solid;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
-            font-size: 16px;
-            color: #333;
-            margin: 5px 0;
-        }
+        
 
         .material-symbols-outlined {
         font-variation-settings:
@@ -168,108 +104,89 @@
         'opsz' 240px,
 
         }
+        .food-category-bar {
+        display: flex; 
+        background-color: #fff; 
+        }
+
+        .food-item {
+            text-align: center; /* Centers the image and text */
+            width: 144px; /* Adjust the size of the images */
+            height: 180px;
+        }
+
+        .food-item img {
+            width: 144px; /* Adjust the size of the images */
+            height: 180px; /* Ensure uniform height */
+            margin-bottom: 10px; /* Space between the image and text */
+        }
+
+
+
+        
 </style>
-    </style>
 </head>
 <body>
 
-    <!-- Header Section -->
-    <div class="header">
-        <h1>Resturant</h1>
-        <div class="search-box">
-            <input type="text" placeholder="Search">
-            <button>Search</button>
+        <!-- Header Section -->
+        <div class="header shadow-lg">
+            <h1>Resturant</h1>
+            <div class="search-box">
+                <input type="text" placeholder="Search">
+                <button>Search</button>
+            </div>
+            <i class="material-symbols-outlined"></i>
+            <button class="menu-btn">Menu</button>
         </div>
-        <i class="material-symbols-outlined"></i>
-        <button class="menu-btn">Menu</button>
-    </div>
-
-    <!-- Menu Items Section -->
-    <div class="menu-items">
-        <!-- Item Card 1 -->
-        <div class="item-card">
-            <div class="itemcard-img">
-                <img src="https://via.placeholder.com/100x100" alt="Fries">
-            </div> 
-            <h3>Pizza</h3>
-            <p>150rs</p>
-            <div class="quantity-control">
-                <button>↑</button>
-                <div class="quantity">1</div>
-                <button>↓</button>
+        <!-- Foood Category bar -->
+        <div class="food-category-bar">
+            <div class="food-item">
+                <a href="Index.html">
+                    <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Pizzas.png" alt="Pizza">
+                </a>
+                
+                
+            </div>
+            <div class="food-item">
+                <a href="/">
+                    <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/8f508de7-e0ac-4ba8-b54d-def9db98959e_burger.png" alt="Burger">
+                </a>
+                
+            </div>
+            <div class="food-item">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/8f508de7-e0ac-4ba8-b54d-def9db98959e_cake.png" alt="Cake">
+            </div>
+            <div class="food-item">
+                <a href="/">
+                    <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Biryani.png" alt="Biryani">
+                </a>
+               
+            </div>
+            <div class="food-item">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Dosa.png" alt="Dosa">
+            </div>
+            <div class="food-item">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Dosa.png" alt="Dosa">
+            </div>
+            <div class="food-item">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Dosa.png" alt="Dosa">
+            </div>
+            <div class="food-item">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Dosa.png" alt="Dosa">
+            </div>
+            <div class="food-item">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Dosa.png" alt="Dosa">
+            </div>
+            <div class="food-item">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Dosa.png" alt="Dosa">
+            </div>
+            <div class="food-item">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Dosa.png" alt="Dosa">
+            </div>
+            <div class="food-item">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Dosa.png" alt="Dosa">
             </div>
         </div>
-
-        <!-- Item Card 2 -->
-        <div class="item-card">
-            <div class="itemcard-img">
-                <img src="https://via.placeholder.com/100x100" alt="Fries">
-            </div> 
-            <h3>Cola</h3>
-            <p>20rs</p>
-            <div class="quantity-control">
-                <button>↑</button>
-                <div class="quantity">1</div>
-                <button>↓</button>
-            </div>
-        </div>
-
-        <!-- Item Card 3 -->
-        <div class="item-card">
-            <div class="itemcard-img">
-                <img src="https://via.placeholder.com/100x100" alt="Fries">
-            </div> 
-            <h3>Pizza</h3>
-            <p>150rs</p>
-            <div class="quantity-control">
-                <button>↑</button>
-                <div class="quantity">1</div>
-                <button>↓</button>
-            </div>
-        </div>
-
-        <!-- Item Card 4 -->
-        <div class="item-card">
-            <div class="itemcard-img">
-                <img src="https://via.placeholder.com/100x100" alt="Fries">
-            </div> 
-            <h3>Biryani</h3>
-            <p>150rs</p>
-            <div class="quantity-control">
-                <button>↑</button>
-                <div class="quantity">1</div>
-                <button>↓</button>
-            </div>
-        </div>
-
         
-        <div class="item-card">
-            <div class="itemcard-img">
-                <img src="https://via.placeholder.com/100x100" alt="Fries">
-            </div> 
-            <h3>Fries</h3>
-            <p>50rs</p>
-            <div class="quantity-control">
-                <button>↑</button>
-                <div class="quantity">1</div>
-                <button>↓</button>
-            </div>
-        </div>
-
-        
-        <div class="item-card">
-            <div class="itemcard-img">
-                <img src="https://via.placeholder.com/100x100" alt="Fries">
-            </div> 
-            <h3>Pizza</h3>
-            <p>150rs</p>
-            <div class="quantity-control">
-                <button>↑</button>
-                <div class="quantity">1</div>
-                <button>↓</button>
-            </div>
-        </div>
-    </div>
-
 </body>
 </html>
