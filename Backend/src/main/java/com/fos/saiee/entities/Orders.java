@@ -8,16 +8,17 @@ import jakarta.persistence.Id;
 public class Orders {
 	
 	@Id
-	@GeneratedValue
+//	@GeneratedValue
 	int order_id;
 	String ordered_time;
 	int restaurant_id;
+	int customer_id;
 	Double total_amount;
 	
 	public Orders(){
 	}
 	
-	public Orders(int order_id, String ordered_time, int restaurant_id, Double total_amount) {
+	public Orders(int order_id, String ordered_time, int restaurant_id,int customer_id,Double total_amount) {
 		super();
 		this.order_id = order_id;
 		this.ordered_time = ordered_time;
@@ -47,6 +48,14 @@ public class Orders {
 
 	public void setRestaurant_id(int restaurant_id) {
 		this.restaurant_id = restaurant_id;
+	}
+	
+	public int getCustomer_id() {
+		return customer_id;
+	}
+	
+	public  void setCustomer_id(int customer_id) {
+		this.customer_id = customer_id;
 	}
 
 	public Double getTotal_amount() {
