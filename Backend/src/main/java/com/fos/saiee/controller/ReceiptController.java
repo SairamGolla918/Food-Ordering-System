@@ -1,7 +1,7 @@
 package com.fos.saiee.controller;
 
-
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -9,23 +9,22 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.fos.saiee.entities.Order_Items;
-import com.fos.saiee.service.OrderedItemsServiceI;
+
+import com.fos.saiee.entities.Receipt;
+import com.fos.saiee.service.ReceiptServiceI;
 
 @RestController
-@RequestMapping(value="ordereditems")
-public class OrderItemsController{
-	
+@RequestMapping(value="receipt")
+public class ReceiptController {
+
 	@Autowired
-	private OrderedItemsServiceI service;
+	ReceiptServiceI service;
 	
 	@GetMapping(path="/getAll")
-	public ResponseEntity<List<Order_Items>> getOrderedItems()
-	{
-		List<Order_Items> list=service.getOrderedItems();
+	public ResponseEntity<List<Receipt>> getReceipts(){
 		
-		return new ResponseEntity<List<Order_Items>>(list,new HttpHeaders(),HttpStatus.OK);
+		List<Receipt> list = service.getReceipts();
+		
+		return new ResponseEntity<List<Receipt>>(list,new HttpHeaders(),HttpStatus.OK);
 	}
-	
-
 }
