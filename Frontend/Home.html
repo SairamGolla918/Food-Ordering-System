@@ -8,185 +8,104 @@
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+    </style>
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Noto Serif', serif;
-            background-color: #F5ECE9;
-            /* padding: 20px; */
-            height: 100%;
-            width: 100%;
-            
-        }
-
-        
-        .header {
-            background-color: #BCCBEA;
-            padding: 25px;
-            display: flex;
-            /* justify-content: space-between; */
-            align-items: center;
-            /* margin-bottom: 20px; */
-            position: sticky;
-
-        }
-
-        .header h1 {
-            margin: 0;
-            color: #333;
-            font-size: 24px;
-        }
-
-        .search-box {
-            display: flex;
-            align-items: center;
-        }
-
-        .search-box input[type="text"] {
-            position: absolute;
-            padding: 8px;
-            border-radius: 5px;
-            border: 2px solid ;
-            font-size: 16px;
-            width: 400px;
-            right: 300px;
-            box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7);
-
-        }
-
-        .search-box button {
-            background-color: #FF7A00;
-            position: absolute;
-            color: black;
-            padding: 8px 16px;
-            margin-left: 10px;
-            border: 2px solid;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            right: 200px;
-            box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7);
-        }
-
-        .menu-btn {
-            position: absolute;
-            right: 20px;
-            background-color: #FF7A00;
-            border: 2px solid black;
-            color: black;
-            box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7);
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        
-        .menu-items {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            padding: 15px;
-        }
-
-        
-
-        .material-symbols-outlined {
-        font-variation-settings:
-        'FILL' 2,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 240px,
-
-        }
-        .food-category-bar {
-        display: flex; 
-        background-color: #fff; 
-        }
-
-        .food-item {
-            text-align: center; /* Centers the image and text */
-            width: 144px; /* Adjust the size of the images */
-            height: 180px;
-        }
-
-        .food-item img {
-            width: 144px; /* Adjust the size of the images */
-            height: 180px; /* Ensure uniform height */
-            margin-bottom: 10px; /* Space between the image and text */
-        }
-
-
-
-        
-</style>
-</head>
-<body>
-
-        <!-- Header Section -->
-        <div class="header shadow-lg">
-            <h1>Resturant</h1>
-            <div class="search-box">
-                <input type="text" placeholder="Search">
-                <button>Search</button>
+    <!-- desktop view -->
+    <div class="container" id="container">
+        <div id="menu">
+            <div class="title">
+                <img src="/images/foodie hunter.png" alt="">
             </div>
-            <i class="material-symbols-outlined"></i>
-            <button class="menu-btn">Menu</button>
-        </div>
-        <!-- Foood Category bar -->
-        <div class="food-category-bar">
-            <div class="food-item">
-                <a href="Index.html">
-                    <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Pizzas.png" alt="Pizza">
-                </a>
-                
-                
-            </div>
-            <div class="food-item">
-                <a href="/">
-                    <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/8f508de7-e0ac-4ba8-b54d-def9db98959e_burger.png" alt="Burger">
-                </a>
-                
-            </div>
-            <div class="food-item">
-                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/8f508de7-e0ac-4ba8-b54d-def9db98959e_cake.png" alt="Cake">
-            </div>
-            <div class="food-item">
-                <a href="/">
-                    <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Biryani.png" alt="Biryani">
-                </a>
-               
-            </div>
-            <div class="food-item">
-                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Dosa.png" alt="Dosa">
-            </div>
-            <div class="food-item">
-                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Dosa.png" alt="Dosa">
-            </div>
-            <div class="food-item">
-                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Dosa.png" alt="Dosa">
-            </div>
-            <div class="food-item">
-                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Dosa.png" alt="Dosa">
-            </div>
-            <div class="food-item">
-                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Dosa.png" alt="Dosa">
-            </div>
-            <div class="food-item">
-                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Dosa.png" alt="Dosa">
-            </div>
-            <div class="food-item">
-                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Dosa.png" alt="Dosa">
-            </div>
-            <div class="food-item">
-                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Dosa.png" alt="Dosa">
+            <div class="menu-item">
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Your Orders</a>
+                <a href="#">Wishlists</a>
+                <a href="#">Cart</a>
+                <a href="#">Contact</a>
+                <a href="#">Checkout</a>
             </div>
         </div>
-        
+
+        <div id="food-container">
+            <div id="header">
+                <div class="add-box">
+                    <i class="fa fa-map-marker your-address" id="add-address"> Your Address</i>
+                </div>
+                <div class="util">
+                    <i class="fa fa-search"> Search</i>
+                    <i class="fa fa-tags"> Offers</i>
+                    <i class="fa fa-cart-plus" id="cart-plus"> 0 Items</i>
+                </div>
+            </div>
+            <div id="food-items" class="d-food-items">
+                <div id="biryani" class="d-biryani">
+                    <p id="category-name">Biryani</p>    
+                </div>
+
+                <div id="chicken" class="d-chicken">
+                    <p id="category-name">Chicken Delicious</p>    
+                </div>
+
+                <div id="paneer" class="d-paneer">
+                    <p id="category-name">Paneer Mania</p>
+                </div>
+
+                <div id="vegetable" class="d-vegetable">
+                    <p id="category-name">Pure Veg Dishes</p> 
+                </div>
+
+                <div id="chinese" class="d-chinese">
+                    <p id="category-name">Chinese Corner</p> 
+                </div>
+
+                <div id="south-indian" class="d-south-indian">
+                    <p id="category-name">South Indian</p>
+                </div>
+            </div>
+
+            <div id="cart-page" class="cart-toggle">
+                <p id="cart-title">Cart Items</p>
+                <p id="m-total-amount">Total Amout : 100</p>
+                <table>
+                    <thead>
+                        <td>Item</td>
+                        <td>Name</td>
+                        <td>Quantity</td>
+                        <td>Price</td>
+                    </thead>
+                    <tbody id="table-body">
+                        
+                    </tbody>
+                </table>
+                <div class="btn-box">
+                    <button class="cart-btn">Checkout</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="cart">
+            <div class="taste-header">
+                <div class="user">
+                    <i class="fa fa-user-circle" id="circle"> Account</i>
+                    
+                </div>
+            </div>
+            <div id="category-list">
+                <p class="item-menu">Go For Hunt</p>
+                <div class="border"></div>                
+            </div>
+            <div id="checkout" class="cart-toggle">
+                <p id="total-item">Total Item : 5</p>
+                <p id="total-price"></p>
+                <p id="delievery">Free delievery on $ 40</p>
+                <button class="cart-btn">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+
+   
+    <script src="/index.js" type="module"></script>
 </body>
 </html>
