@@ -1,5 +1,14 @@
  # Food-Ordering-System
 
+
+
+
+ # Food Ordering System, aims to enhance restaurant service efficiency by reducing wait times and streamlining the food ordering process. It allows users to browse a menu, select food items, place orders, and view a detailed bill, including restaurant name, selected items, prices, and total amount. Built with Java, Spring Core, Spring Web MVC, JDBC, and MySQL, the system leverages a web-based interface created with HTML for a user-friendly experience.
+
+# The database structure includes tables for managing food categories, menu items, restaurants, orders, order items, and receipts. It enables seamless data handling for order tracking, bill generation, and restaurant-specific menus. Users can efficiently interact with the system to improve satisfaction and convenience.
+
+# The project emphasizes modular design, allowing scalability and ease of maintenance. The collaboration of your team of six ensures robust development. By integrating advanced features and UI enhancements, your system aims to modernize the restaurant ordering process while ensuring functionality and reliability for end users.
+
 <!--
 # DB - Design...
 
